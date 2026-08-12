@@ -47,12 +47,20 @@
         /* Nome em destaque no topo */
         h1 {
             font-size: 2.2rem;
-            /* Gradiente aplicado ao texto do nome, para chamar atenção */
-            background: linear-gradient(90deg, #38bdf8, #818cf8);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
             margin-bottom: 8px;
+            /* Cor sólida de reserva: garante que o nome continue legível
+               caso o navegador não suporte o efeito de gradiente no texto */
+            color: #38bdf8;
+        }
+
+        /* Gradiente aplicado ao texto do nome (só quando o navegador suporta) */
+        @supports (background-clip: text) or (-webkit-background-clip: text) {
+            h1 {
+                background: linear-gradient(90deg, #38bdf8, #818cf8);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+            }
         }
 
         /* Pequeno subtítulo abaixo do nome */
@@ -77,6 +85,7 @@
             display: flex;
             flex-direction: column;
             gap: 12px;
+            list-style: none;
         }
 
         /* Estilo de cada link, parecendo um botão */
@@ -102,7 +111,7 @@
         footer {
             margin-top: 28px;
             font-size: 0.8rem;
-            color: #64748b;
+            color: #94a3b8;
         }
     </style>
 </head>
@@ -126,14 +135,14 @@
         </p>
 
         <!-- Seção de links de contato -->
-        <div class="links">
-            <a href="https://github.com/sampaioluciano" target="_blank" rel="noopener">
+        <ul class="links">
+            <li><a href="https://github.com/sampaioluciano" target="_blank" rel="noopener" aria-label="GitHub (abre em nova aba)">
                 GitHub
-            </a>
-            <a href="mailto:luciano.sampaio@me.com">
+            </a></li>
+            <li><a href="mailto:luciano.sampaio@me.com">
                 E-mail
-            </a>
-        </div>
+            </a></li>
+        </ul>
 
         <!-- Rodapé com o ano atual fixo (edite se quiser) -->
         <footer>
