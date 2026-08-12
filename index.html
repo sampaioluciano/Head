@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!-- Declara que este documento usa HTML5 -->
+<html lang="pt-BR">
+<head>
+    <!-- Configurações que o navegador usa antes de mostrar a página -->
+    <meta charset="UTF-8">
+    <!-- Faz a página se ajustar bem a telas de celular -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luciano Sampaio</title>
+
+    <style>
+        /* Reset básico: remove margens/padding padrão do navegador
+           e faz "box-sizing: border-box" para facilitar o cálculo de tamanhos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilo geral do corpo da página */
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            /* Fundo com gradiente suave, dá um ar mais moderno que uma cor lisa */
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            color: #e2e8f0;
+            min-height: 100vh;
+            /* Centraliza o conteúdo (o "cartão") na tela, tanto na vertical quanto na horizontal */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* O "cartão" central que contém todas as informações */
+        .cartao {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 480px;
+            width: 100%;
+            /* Sombra suave para dar profundidade ao cartão */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            text-align: center;
+        }
+
+        /* Nome em destaque no topo */
+        h1 {
+            font-size: 2.2rem;
+            /* Gradiente aplicado ao texto do nome, para chamar atenção */
+            background: linear-gradient(90deg, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 8px;
+        }
+
+        /* Pequeno subtítulo abaixo do nome */
+        .subtitulo {
+            color: #94a3b8;
+            font-size: 1rem;
+            margin-bottom: 24px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        /* Parágrafo da biografia */
+        .bio {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #cbd5e1;
+            margin-bottom: 32px;
+        }
+
+        /* Container que agrupa os links, um abaixo do outro */
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        /* Estilo de cada link, parecendo um botão */
+        .links a {
+            display: block;
+            text-decoration: none;
+            color: #e2e8f0;
+            background: #334155;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 500;
+            /* Transição suave ao passar o mouse */
+            transition: background 0.2s ease, transform 0.2s ease;
+        }
+
+        /* Efeito visual quando o mouse passa por cima do link */
+        .links a:hover {
+            background: #475569;
+            transform: translateY(-2px);
+        }
+
+        /* Rodapé simples com direitos de autor */
+        footer {
+            margin-top: 28px;
+            font-size: 0.8rem;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cartão principal que centraliza todo o conteúdo da página -->
+    <main class="cartao">
+
+        <!-- Nome em destaque -->
+        <h1>Luciano Sampaio</h1>
+
+        <!-- Pequena chamada/profissão, edite como preferir -->
+        <p class="subtitulo">Desenvolvedor de Software</p>
+
+        <!-- Parágrafo de biografia: texto de exemplo para você editar -->
+        <p class="bio">
+            Olá! Sou apaixonado por tecnologia e por criar soluções simples
+            para problemas do dia a dia. Gosto de aprender coisas novas e
+            de compartilhar conhecimento pelo caminho. Sinta-se à vontade
+            para entrar em contato comigo!
+        </p>
+
+        <!-- Seção de links de contato -->
+        <div class="links">
+            <a href="https://github.com/sampaioluciano" target="_blank" rel="noopener">
+                GitHub
+            </a>
+            <a href="mailto:luciano.sampaio@me.com">
+                E-mail
+            </a>
+        </div>
+
+        <!-- Rodapé com o ano atual fixo (edite se quiser) -->
+        <footer>
+            &copy; 2026 Luciano Sampaio
+        </footer>
+
+    </main>
+
+</body>
+</html>
